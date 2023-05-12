@@ -25,8 +25,8 @@ function Login() {
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const navigate = useNavigate();
-  const location = useLocation();
-  const {from} = location.state || {from :{pathname: "/"}};
+  //const location = useLocation();
+  //const {from} = location.state || {from :{pathname: "/"}};
   
 
   const googleProvider = new GoogleAuthProvider();
@@ -146,7 +146,7 @@ function Login() {
           newUserInfo.success = true;
           setUser(newUserInfo);
           setLoggedInUser(newUserInfo);
-          navigate ("/" from);
+          navigate ("/shop");
           console.log("sign in user info", userCredential.user);
         })
          .catch((error) => {

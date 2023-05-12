@@ -8,7 +8,7 @@ import { UserContext } from '../../App';
         if (!loggedInUser) 
         return(
           
-          <Navigate to="/login" state={from:location}/>
+          <Navigate to="/login"/>
            
           );
         return(
@@ -16,6 +16,6 @@ import { UserContext } from '../../App';
           
         
           );
-};
+      };
 
 export default PrivateRoute;
